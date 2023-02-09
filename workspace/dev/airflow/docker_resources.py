@@ -31,6 +31,12 @@ dev_airflow_redis = Redis(
     container_host_port=8321,
 )
 
+# Spark connection_id
+airflo_spark_conn_id: str = "local"
+if ws_settings.dev_spark_enabled:
+    from workspace.dev.spark import dev_spark_driver
+    airflo_spark_conn_id = f"{dev_spark_driver.driver_url}?deploy-mode=cluster"
+
 # -*- Settings
 # waits for airflow-db to be ready before starting app
 wait_for_db: bool = True
@@ -56,6 +62,8 @@ dev_airflow_env: Dict[str, str] = {
     "AIRFLOW_CONN_AWS_DEFAULT": "aws://",
     # Airflow Navbar color
     "AIRFLOW__WEBSERVER__NAVBAR_COLOR": "#d1fae5",
+    "AIRFLOW_CONN_SPARK_DEFAULT": airflo_spark_conn_id,
+    "AIRFLOW_CONN_SPARK_SQL_DEFAULT": airflo_spark_conn_id,
 }
 
 # -*- Airflow image
