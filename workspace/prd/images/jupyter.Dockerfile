@@ -1,4 +1,4 @@
-FROM phidata/jupyter:3.5.2
+FROM phidata/jupyter-spark:3.5.2
 
 RUN pip install --upgrade pip
 

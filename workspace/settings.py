@@ -55,7 +55,7 @@ ws_settings = WorkspaceSettings(
     # Suffix added to the image name
     image_suffix="aws-spark-dp",
     # Build images locally
-    build_images=True,
+    # build_images=True,
     # Push images after building
     # push_images=True,
     # Skip cache when building images

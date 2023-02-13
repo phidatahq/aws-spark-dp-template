@@ -5,7 +5,7 @@ set -e
 CURR_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DOCKER_FILE="${CURR_SCRIPT_DIR}/superset.Dockerfile"
 REPO="repo"
-NAME="superset-aws-dp"
+NAME="superset-aws-spark-dp"
 TAG="prd"
 
 # Run docker buildx create --use before running this script

@@ -5,7 +5,7 @@ set -e
 CURR_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DOCKER_FILE="${CURR_SCRIPT_DIR}/databox.Dockerfile"
 REPO="repo"
-NAME="databox-aws-dp"
+NAME="databox-aws-spark-dp"
 TAG="prd"
 
 # Run docker buildx create --use before running this script

@@ -1,4 +1,4 @@
-FROM phidata/databox:2.5.0
+FROM phidata/databox-spark:2.5.1
 
 RUN pip install --upgrade pip
 

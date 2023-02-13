@@ -1,4 +1,4 @@
-FROM phidata/airflow:2.5.0
+FROM phidata/airflow-spark:2.5.1
 
 RUN pip install --upgrade pip
 
