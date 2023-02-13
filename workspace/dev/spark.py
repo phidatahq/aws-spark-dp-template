@@ -6,7 +6,6 @@ from workspace.settings import ws_settings
 # -*- Run a spark cluster on docker
 
 dev_spark_driver = SparkDriver(
-    name=f"spark-{ws_settings.ws_name}-driver",
     mount_workspace=True,
     # Connect to spark driver on port 9080
     container_host_port=9080,
@@ -21,7 +20,6 @@ dev_spark_driver = SparkDriver(
 )
 
 dev_spark_worker = SparkWorker(
-    name=f"spark-{ws_settings.ws_name}-worker",
     driver_url=dev_spark_driver.driver_url,
     mount_workspace=True,
     cores=2,
